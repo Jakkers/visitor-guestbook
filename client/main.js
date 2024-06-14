@@ -28,7 +28,7 @@ async function submitButton(event) {
 
   try {
     const response = await fetch(
-      "https://visitor-guestbook-89ko.onrender.com/visitor_information",
+      "https://visitor-guestbook-89ko.onrender.com/visitor-information",
       {
         method: "POST",
         headers: {
