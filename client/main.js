@@ -13,17 +13,15 @@ async function fetchAndRenderVisitorInfo() {
 
   visitorInfo.forEach((visitor) => {
     const visitorDiv = document.createElement("div");
-    visitorDiv.innerHTML = `<p id="name-date">${visitor.name}</p> <p id="comment-box">${visitor.comment}</p><p id="rating">${visitor.rating}</p><button class="delete-button">Delete</button>`;
+    visitorDiv.innerHTML = `<p id="name-date">${visitor.name}</p> <p id="comment-box">${visitor.comment}</p><p id="rating">${visitor.rating}</p>`;
     visitorInfoDiv.appendChild(visitorDiv);
   });
+  function updateScroll() {
+    let element = document.getElementById("visitorInfo");
+    element.scrollTop = element.scrollHeight;
+  }
+  updateScroll();
 }
-
-// function updateScroll() {
-//   let element = document.getElementById("visitorInfo");
-//   element.scrollTop = element.scrollHeight;
-// }
-// updateScroll();
-// }
 
 //   //adding auto content into view
 //   const element = document.getElementById("visitorInfo");
@@ -67,7 +65,7 @@ async function submitButton(event) {
   }
 }
 
-// now to add a delete button
+// // now to add a delete button
 
 // const deleteButton = document.querySelector(".delete-button");
 
@@ -100,4 +98,4 @@ async function submitButton(event) {
 //   }
 // }
 
-// deleteButton.addEventListener("onclick", deletePost);
+// deleteButton.addEventListener("click", deletePost);

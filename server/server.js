@@ -38,22 +38,21 @@ app.get("/visitor-information", async (request, response) => {
   const result = await db.query(`SELECT * FROM visitor_information`);
   response.json(result.rows);
 });
-debugger;
-//to delete a post
-app.delete("/visitor-information", async (request, response) => {
-  const { date, name, email, comment, rating } = request.body;
 
-  try {
-    await db.query(
-      `DELETE FROM visitor_information WHERE (date,name,email,comment,rating) VALUES ($1, $2, $3, $4, $5)`,
-      [date, name, email, comment, rating]
-    );
-    response.status(200).json({ success: true });
-  } catch (error) {
-    console.log("delete not working", error);
-    response.status(500).json({ success: false });
-  }
-});
+// //to delete a post
+// app.delete("/visitor-information", async (request, response) => {
+//   const { ID } = request.body;
+
+//   try {
+//     await db.query(`DELETE FROM visitor_information WHERE (ID) VALUES ($1)`, [
+//       ID,
+//     ]);
+//     response.status(200).json({ success: true });
+//   } catch (error) {
+//     console.log("delete not working", error);
+//     response.status(500).json({ success: false });
+//   }
+// });
 
 // Now to insert into the client from the database
 app.post("/visitor-information", async (request, response) => {

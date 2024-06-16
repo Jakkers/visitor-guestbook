@@ -134,6 +134,11 @@ button:focus-visible {
   text-align: left;
 }
 
+#rating {
+  margin-right: 10px;
+  flex-basis: 20ch;
+}
+
 #comment-box {
   flex-grow: 1;
   flex-basis: 150ch;
