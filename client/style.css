@@ -1,3 +1,7 @@
+* {
+  text-align: left;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -25,9 +29,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 h1 {
@@ -35,11 +39,16 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  place-items: left;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
+  margin-top: 88px;
 }
 
 .logo {
@@ -70,7 +79,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ff4400;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -93,4 +102,112 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#visitorInfo {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+#visitorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  bottom: 0;
+  /* outline: 2px solid #646cff; */
+}
+
+#visitorInfo div {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  /* outline: 2px solid #646cff; */
+}
+
+#visitorInfo div p {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  /* outline: 2px solid #646cff; */
+  text-align: left;
+}
+
+#comment-box {
+  flex-grow: 1;
+  flex-basis: 150ch;
+}
+
+#name-date {
+  flex-basis: 40ch;
+  flex-shrink: 1;
+}
+
+.nav-bar {
+  position: fixed;
+  height: 110px;
+  width: 100vw;
+  background-color: #ff4400;
+}
+
+#logo-style {
+  display: flex;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media (width <= 768px) {
+  #logo-style {
+    display: flex;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: large;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .nav-bar {
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+  }
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+    margin-top: 18px;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+  #logo-style {
+    display: flex;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .nav-bar {
+    position: fixed;
+    height: 70px;
+    width: 100vw;
+  }
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+    margin-top: 38px;
+  }
+}
+
+.delete-button {
+  height: 30px;
+  font-size: xx-small;
+  background-color: rgb(147, 17, 43);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

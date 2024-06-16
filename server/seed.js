@@ -7,5 +7,8 @@ db.query(`CREATE TABLE IF NOT EXISTS visitor_information(
     Date DATE,
     Name VARCHAR(255),
     Email VARCHAR(320),
-    Comment TEXT
+    Comment TEXT,
+    ratings VARCHAR(255)
 )`);
+
+db.query(`ALTER TABLE visitor_information ADD ratings VARCHAR(255)`);

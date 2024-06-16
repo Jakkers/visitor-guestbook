@@ -7,21 +7,45 @@
     <title>Visitor Guestbook</title>
   </head>
   <body>
+    <nav class="nav-bar">
+      <h1 id="logo-style">HOTEL CALIFORNIA</h1>
+    </nav>
     <div id="app">
+      <section id="visitorInfo"></section>
+      <h2>
+        We hope you enjoyed your stay, please leave a comment in the guestbook.
+      </h2>
       <section>
         <form id="visitorForm">
           <label for="date">Date: </label>
-          <input type="datetime-local" name="date" id="date" />
+          <input type="date" name="date" id="date" />
           <label for="name">Name: </label>
           <input type="text" name="name" id="name" />
           <label for="email">Email: </label>
           <input type="email" name="email" id="email" />
           <label for="comment">Comment: </label>
-          <input type="text" name="comment" id="comment" />
+          <textarea name="comment" id="comment" rows="5"></textarea>
+          <fieldset name="ratings" class="ratings">
+            <input
+              type="radio"
+              id="five-star"
+              name="rating"
+              value="★★★★★"
+              checked
+            />
+            <label for="five-star">★★★★★</label>
+            <input type="radio" id="four-star" name="rating" value="★★★★" />
+            <label for="four-star">★★★★</label>
+            <input type="radio" id="three-star" name="rating" value="★★★" />
+            <label for="three-star">★★★</label>
+            <input type="radio" id="two-star" name="rating" value="★★" />
+            <label for="two-star">★★</label>
+            <input type="radio" id="one-star" name="rating" value="★" />
+            <label for="one-star">★</label>
+          </fieldset>
           <button type="submit">Submit</button>
         </form>
       </section>
-      <section id="visitorInfo"></section>
     </div>
     <script type="module" src="./main.js" defer></script>
   </body>
