@@ -13,18 +13,26 @@ async function fetchAndRenderVisitorInfo() {
 
   visitorInfo.forEach((visitor) => {
     const visitorDiv = document.createElement("div");
-    visitorDiv.innerHTML = `<p id="name-date">${visitor.name}</p> <p id="comment-box">${visitor.comment}</p><p id="ratings">${visitor.ratings}</p><button class="delete-button">Delete</button>`;
+    visitorDiv.innerHTML = `<p id="name-date">${visitor.name}</p> <p id="comment-box">${visitor.comment}</p><p id="rating">${visitor.rating}</p><button class="delete-button">Delete</button>`;
     visitorInfoDiv.appendChild(visitorDiv);
   });
-
-  //adding auto content into view
-  const element = document.getElementById("visitorInfo");
-  element.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
 }
+
+// function updateScroll() {
+//   let element = document.getElementById("visitorInfo");
+//   element.scrollTop = element.scrollHeight;
+// }
+// updateScroll();
+// }
+
+//   //adding auto content into view
+//   const element = document.getElementById("visitorInfo");
+//   element.scrollIntoView({
+//     behavior: "smooth",
+//     block: "start",
+//     inline: "nearest",
+//   });
+// }
 
 fetchAndRenderVisitorInfo();
 
@@ -61,35 +69,35 @@ async function submitButton(event) {
 
 // now to add a delete button
 
-const deleteButton = document.querySelector(".delete-button");
+// const deleteButton = document.querySelector(".delete-button");
 
-async function deletePost(event) {
-  event.preventDefault();
+// async function deletePost(event) {
+//   event.preventDefault();
 
-  const formData = new FormData(form);
-  const formValues = Object.fromEntries(formData);
+//   const formData = new FormData(form);
+//   const formValues = Object.fromEntries(formData);
 
-  try {
-    const response = await fetch(
-      "https://visitor-guestbook-89ko.onrender.com/visitor-information",
-      {
-        method: "DELETE",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(formValues),
-      }
-    );
-    const data = await response.json();
-    if (data.success) {
-      console.log("Success! Data is deleted.");
-      fetchAndRenderVisitorInfo();
-    } else {
-      console.log("Error");
-    }
-  } catch (error) {
-    console.log("Error: ", error);
-  }
-}
+//   try {
+//     const response = await fetch(
+//       "https://visitor-guestbook-89ko.onrender.com/visitor-information",
+//       {
+//         method: "DELETE",
+//         headers: {
+//           "content-type": "application/json",
+//         },
+//         body: JSON.stringify(formValues),
+//       }
+//     );
+//     const data = await response.json();
+//     if (data.success) {
+//       console.log("Success! Data is deleted.");
+//       fetchAndRenderVisitorInfo();
+//     } else {
+//       console.log("Error");
+//     }
+//   } catch (error) {
+//     console.log("Error: ", error);
+//   }
+// }
 
-deleteButton.addEventListener("onclick", deletePost);
+// deleteButton.addEventListener("onclick", deletePost);
