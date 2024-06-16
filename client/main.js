@@ -57,6 +57,7 @@ async function submitButton(event) {
     if (data.success) {
       console.log("Success! Data is saved.");
       fetchAndRenderVisitorInfo();
+      form.reset();
     } else {
       console.log("Error");
     }

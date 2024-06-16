@@ -33,3 +33,7 @@ Detailing useful external sources that helped you complete the assignment (e.g Y
 
 Describing errors or bugs you encountered while completing your assignment.
 • I had an odd bug where my form information was not being submitted, after changing something on the Supabase table it seemed to work.
+
+🙏🏼 Credits
+• Thank you to Alex and Theo for weekend Discord chats and debugging
+• Thank you Joe for helping set up the WRRC
