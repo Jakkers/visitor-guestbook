@@ -14,16 +14,22 @@ A visitor guestbook assignment, using forms, SQL, servers and databases.
 
 🎯 Were there any requirements or goals that you were not quite able to achieve?
 • Delete button
-• Rating
 • Filter
-•
+• Like
 
 🎯 If so, could you please tell us what was it that you found difficult about these tasks?
+• Trying to translate the logic from POST to DELETE an item from the web page and the API.
+• I didn't quite get the chance to tackle the Filter or Like options.
 
 ## (Optional)
 
 🏹 Feel free to add any other reflections you would like to share about your submission e.g.
 
 What went really well and what could have gone better?
+• The styling went quite well, I was able to create an app that works on different device sizes and takes into account how the user would use it in the most efficient way.
+
 Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
+• https://www.youtube.com/watch?v=Ns12ALe8aqI&t=774s --> Flexbox
+
 Describing errors or bugs you encountered while completing your assignment.
+• I had an odd bug where my form information was not being submitted, after changing something on the Supabase table it seemed to work.
